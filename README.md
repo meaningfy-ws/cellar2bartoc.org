@@ -1,4 +1,4 @@
-# Production of import package for EU vocabularies assets on Bartoc.org
+# Production of import package to deploy EU vocabularies assets on Bartoc.org
 
 The process was imagined as a future component of a larger process.
 The current implementation of the pipelines uses Linked Pipes ETL (https://etl.linkedpipes.com/).
