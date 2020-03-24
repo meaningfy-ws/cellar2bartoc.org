@@ -20,7 +20,7 @@ The current implementation of the pipelines uses Linked Pipes ETL (https://etl.l
 * Phase-2 : Save file on local FTP
 
 
-###Technical notes for the current implementation
-input data: accesible thru CELLAR SPARQL endpoint
-output data: ftp://localhost:22/data/out/
+### Technical notes for the current implementation
+* input data: accesible thru CELLAR SPARQL endpoint
+* output data: ftp://localhost:22/data/out/
  
