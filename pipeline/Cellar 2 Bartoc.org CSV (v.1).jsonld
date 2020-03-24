@@ -1,0 +1,155 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487",
+    "@type" : [ "http://linkedpipes.com/ontology/Pipeline" ],
+    "http://etl.linkedpipes.com/ontology/version" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#int",
+      "@value" : "2"
+    } ],
+    "http://linkedpipes.com/ontology/profile" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1574852350487/profile/default"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@value" : "Cellar 2 Bartoc.org CSV (v.1)"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/9f2f-9b7e",
+    "@type" : [ "http://linkedpipes.com/ontology/Component" ],
+    "http://linkedpipes.com/ontology/configurationGraph" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/9f2f-9b7e/configuration"
+    } ],
+    "http://linkedpipes.com/ontology/template" : [ {
+      "@id" : "http://etl.linkedpipes.com/resources/components/l-ftpFiles/0.0.0"
+    } ],
+    "http://linkedpipes.com/ontology/x" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "2212"
+    } ],
+    "http://linkedpipes.com/ontology/y" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "711"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@value" : "Load to FTP"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/ed6e-b878",
+    "@type" : [ "http://linkedpipes.com/ontology/Component" ],
+    "http://linkedpipes.com/ontology/configurationGraph" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/ed6e-b878/configuration"
+    } ],
+    "http://linkedpipes.com/ontology/template" : [ {
+      "@id" : "http://etl.linkedpipes.com/resources/components/e-sparqlEndpointSelect/0.0.0"
+    } ],
+    "http://linkedpipes.com/ontology/x" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "1528"
+    } ],
+    "http://linkedpipes.com/ontology/y" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "734"
+    } ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@value" : "Generate Bartoc.org csv file in accordance with the mapping"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@value" : "SPARQL endpoint select"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/connection/ca79-ba96",
+    "@type" : [ "http://linkedpipes.com/ontology/Connection" ],
+    "http://linkedpipes.com/ontology/sourceBinding" : [ {
+      "@value" : "OutputFiles"
+    } ],
+    "http://linkedpipes.com/ontology/sourceComponent" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/ed6e-b878"
+    } ],
+    "http://linkedpipes.com/ontology/targetBinding" : [ {
+      "@value" : "FilesInput"
+    } ],
+    "http://linkedpipes.com/ontology/targetComponent" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/9f2f-9b7e"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/profile/default",
+    "@type" : [ "http://linkedpipes.com/ontology/ExecutionProfile" ],
+    "http://linkedpipes.com/ontology/rdfRepositoryPolicy" : [ {
+      "@id" : "http://linkedpipes.com/ontology/repository/SingleRepository"
+    } ],
+    "http://linkedpipes.com/ontology/rdfRepositoryType" : [ {
+      "@id" : "http://linkedpipes.com/ontology/repository/NativeStore"
+    } ]
+  } ],
+  "@id" : "http://localhost:8080/resources/pipelines/1574852350487"
+}, {
+  "@graph" : [ {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/9f2f-9b7e/configuration",
+    "@type" : [ "http://plugins.linkedpipes.com/ontology/l-ftpFiles#Configuration" ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#directory" : [ {
+      "@value" : "/data/out/"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#directoryControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#host" : [ {
+      "@value" : "localhost"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#hostControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#password" : [ {
+      "@value" : "ftpuser"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#passwordControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#port" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "22"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#portControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#retryCountControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#username" : [ {
+      "@value" : "ftpuser"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/l-ftpFiles#usernameControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ]
+  } ],
+  "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/9f2f-9b7e/configuration"
+}, {
+  "@graph" : [ {
+    "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/ed6e-b878/configuration",
+    "@type" : [ "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#Configuration" ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#defaultGraphControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#endpoint" : [ {
+      "@value" : "http://publications.europa.eu/webapi/rdf/sparql"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#endpointControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#fileName" : [ {
+      "@value" : "PO_resources2Bartoc.csv"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#fileNameControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#query" : [ {
+      "@value" : "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>\nPREFIX dstype: <http://publications.europa.eu/resource/authority/dataset-type/>\nPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\n# The fields are nammed in acordance with the mapping \n# as defined in the coresponding PO user profile on Bartoc\nselect ?sameAsWork ?guid ?work_title ?user_name ?user_mail ?status ?promote ?sticky ?lng ?issued ?field_creator_url ?field_creator_title ?field_access ?formats ?simple_type ?field_subject_area ?field_ddc ?languages ?field_topic ?field_location_taxonomize_terms ?field_license ?field_ilc ?field_autor ?alt_title ?english_title ?description ?country ?locality ?postal_code ?street ?field_contact\n\n# Only Authority tables and thesaurus works will target Bartok.org\n{\n    values ?type {\n\t<http://publications.europa.eu/resource/authority/dataset-type/NAL>\n\t<http://publications.europa.eu/resource/authority/dataset-type/THESAURUS>\n}\n  \n# As the system is not capable to work with multiple distributions, \n# SKOS CORE will be the only one listed\nvalues ?manifestation_type {  \n\t\"SKOS_CORE\"^^<http://www.w3.org/2001/XMLSchema#string>\n}\n\n    ?complexWork owl:sameAs ?sameAsWork  .\n    ?complexWork a cdm:evolutive_work .\n    ?complexWork cdm:work_dataset_has_type_concept_type_dataset ?type .\n    Optional {\n       ?complexWork cdm:work_id ?work_id.\n    }\n    ?expressionCellarId cdm:expression_belongs_to_work ?complexWork .\n    ?manifestationCellarId cdm:manifestation_manifests_expression ?expressionCellarId .\n    ?manifestationCellarId cdm:manifestation_type ?manifestation_type .\n    \n    # standard fields from CDM\n    ?complexWork cdm:work_title ?w_title .\n    ?complexWork cdm:work_date_creation ?issued .\n    ?complexWork cdm:work_dataset_description_editorial  ?description .\n\n    \n    #OPTIONAL {\n    #SELECT ?expressionCellarId (GROUP_CONCAT(?lang; SEPARATOR=\" \") as ?s_lang)\n     # WHERE {\n     #       ?expressionCellarId cdm:expression_uses_language ?lang .\n     #       }\n     # LIMIT 2\n    #}\n    BIND(\"English\" as ?s_lang )\n\n    #OPTIONAL {\n    #SELECT ?manifestationCellarId (GROUP_CONCAT(?format; SEPARATOR=\" \") as ?s_format)\n    #  WHERE {\n    #        ?manifestationCellarId cdm:manifestation_type ?format .\n    #        }\n    #}\n    BIND(\"SKOS\" as ?formats ) # To be replaced with generated field\n  \n\n    # Specific adjustments to comply with Bartoc requirements\n    BIND(REPLACE(STR(?manifestationCellarId ),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?guid)\n    BIND(REPLACE(STR(?type),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?s1_type)\n    BIND(REPLACE(STR(?s1_type),\"NAL\",\"name authority list\") as ?s2_type )\n    BIND(REPLACE(STR(?s2_type),\"THESAURUS\",\"thesaurus\") as ?simple_type )\n    BIND(REPLACE(STR(?w_title ),\"@en\",\"\") as ?work_title )\n    BIND(CONCAT(?work_title, \" \", ?simple_type ) as ?alt_title )\n    BIND(REPLACE(STR(?s_lang),\"http://publications.europa.eu/resource/authority/language/\",\"\") as ?languages )\n\n\n    # Hard coded fields\n    BIND(\"EN\" as ?lng )\n    BIND(\"PublicationsEuropeEU\" as ?user_name )\n    BIND(\"op-eu-vocabularies@publications.europa.eu\" as ?user_mail )\n    BIND(\"1\" as ?status )\n    BIND(\"1\" as ?promote )\n    BIND(\"0\" as ?sticky )\n    BIND(\"http://viaf.org/viaf/229069752\" as ?field_creator_url )\n    BIND(\"Publications Office of the European Union\" as ?field_creator_title )\n    BIND(\"Free\" as ?field_access )\n    BIND(\"General works, Computer science and Information\" as ?field_subject_area )\n    BIND(\"001 Knowledge\" as ?field_ddc )\n    BIND(\"government\" as ?field_topic )\n    BIND(\"Luxembourg\" as ?field_location_taxonomize_terms )\n    BIND(\"CC0: Creative Commons Zero (Public Domain)\" as ?field_license )\n    BIND(\"V: general class\" as ?field_ilc )\n    BIND(\"Publications Office of the European Union\" as ?field_autor )\n    BIND(?work_title  as ?english_title )\n    BIND(\"LU\" as ?country )\n    BIND(\"Luxembourg\" as ?locality )\n    BIND(\"L-2985\" as ?postal_code )\n    BIND(\"2 rue Mercier\" as ?street )\n    BIND(\"OP-EU-VOCABULARIES@publications.europa.eu\" as ?field_contact)\n\n\n} \norder by ?sameAsWork \n"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#queryControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointSelect#useAuthentication" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+      "@value" : "false"
+    } ]
+  } ],
+  "@id" : "http://localhost:8080/resources/pipelines/1574852350487/component/ed6e-b878/configuration"
+} ]
